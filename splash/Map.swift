@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 
 enum Color: Int {
-    case unknow = 0, red, blue, yellow, white
+    case unknow = 0, red, blue, yellow, white, voids
 }
 
 class Map {
@@ -23,5 +23,20 @@ class Map {
         self.column = column
         self.row = row
         self.color = color
+    }
+    
+    var spriteName: String {
+        let spriteName = [
+            "red",
+            "blue",
+            "yellow",
+            "white",
+            "voids"
+        ]
+        
+        return spriteName[rawValue - 1]
+    }
+    var highlightedSpriteName: String{
+        return spriteName + "-Highlighted"
     }
 }
