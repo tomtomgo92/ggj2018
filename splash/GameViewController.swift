@@ -12,7 +12,36 @@ import GameplayKit
 
 class GameViewController: UIViewController {
 
+    var scene: GameScene!
+    
+    override var prefersStatusBarHidden: Bool{
+        return true
+    }
+    
+    override var shouldAutorotate: Bool {
+        return true
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return [.portrait, .portraitUpsideDown]
+    }
+    
     override func viewDidLoad() {
+        super .viewDidLoad()
+        
+        //configure la vue
+        let skView = view as! SKView
+        skView.isMultipleTouchEnabled = false
+        
+        //créait et configure la scene
+        scene = GameScene(size: skView.bounds.size)
+        scene.scaleMode = .aspectFill
+        
+        //presente la scene
+        skView.presentScene(scene)
+    }
+    
+/*    override func viewDidLoad() {
         super.viewDidLoad()
         
         if let view = self.view as! SKView? {
@@ -51,5 +80,5 @@ class GameViewController: UIViewController {
 
     override var prefersStatusBarHidden: Bool {
         return true
-    }
+    }*/
 }
