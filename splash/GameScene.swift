@@ -40,8 +40,8 @@ class GameScene: SKScene {
     
     var level: Level!
     
-     let TileWidth: CGFloat = 60.0
-     let TileHeight: CGFloat = 75.0
+     let TileWidth: CGFloat = 35.0
+     let TileHeight: CGFloat = 40.0
     
     let gameLayer = SKNode()
     let mapsLayer = SKNode()
@@ -67,6 +67,16 @@ class GameScene: SKScene {
     var boule: Ball!
     
     var ballLayer = SKNode()
+    var player = SKSpriteNode()
+    
+//    override func touchesBegan(_ touches: Set<UITouch>,with event: UIEvent?){
+//        touch in touches {
+//            let location = touch.locationNode(self)
+//            
+//            player.position.x = location.X
+//            player.position.y = location.y
+//        }
+//    }
     
     
 }

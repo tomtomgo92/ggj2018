@@ -33,6 +33,10 @@ enum Color: Int, CustomStringConvertible
     var highlightedSpriteName: String{
         return spriteName + "-Highlighted"
     }
+    
+    static func random() -> Color {
+        return Color(rawValue: Int(arc4random_uniform(6)) + 1)!
+    }
 }
 
 class Map: CustomStringConvertible, Hashable {
