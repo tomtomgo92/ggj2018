@@ -69,6 +69,8 @@ class Level {
                 }
             }
         }
+        
+        
     }
 //       var bal = Ball.Posit(yPos: 0, xPos: 3)
 //        for row in 0..<NumColumn {
