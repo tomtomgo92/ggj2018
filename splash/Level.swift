@@ -34,9 +34,12 @@ class Level {
                 if(row == 0 && column == 0) {
                     color = Color.ball
                 }
-                else if(row == 5 && column == 1)
+                else if((row == 5 && column == 1) || (row == 3 && column == 1) || (row == 3 && column == 3) || (row == 1 && column == 5) || (row == 2 && column == 4) || (row == 1 && column == 2))
                 {
                     color = Color.red
+                }
+                else if((row == 4 && column == 4) || (row == 3 && column == 0)) {
+                    color = Color.yellow
                 }
                 else {
                     color = Color.blue
