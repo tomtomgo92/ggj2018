@@ -11,7 +11,7 @@ import Foundation
 let NumColumn = 4
 let NumRows = 6
 
-class level {
+class Level {
     fileprivate var maps = Array2D<Map>(columns: NumColumn, rows: NumRows)
     
     func mapAt(column: Int, row: Int) -> Map? {
@@ -26,15 +26,15 @@ class level {
     
     private func createInitialMap() -> Set<Map> {
     var set = Set<Map>()
-        var color = Color.voids
+        var color = Color.blue
         
         for row in 0..<NumColumn {
             for column in 0..<NumRows {
-                if(row == 1 && column == 0) {
+                if(row == 3 && column == 1) {
                     color = Color.red
                 }
                 else {
-                    color = Color.voids
+                    color = Color.blue
                 }
                 let map = Map(column: column, row: row, color: color)
                 maps[column, row] = map

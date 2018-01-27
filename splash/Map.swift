@@ -9,10 +9,12 @@
 import Foundation
 import SpriteKit
 
-enum Color: Int, CustomStringConvertible {
+enum Color: Int, CustomStringConvertible
+{
     case unknow = 0, red, blue, yellow, white, voids
     
-    var spriteName: String {
+    var spriteName: String
+    {
         let spriteNames = [
             "red",
             "blue",

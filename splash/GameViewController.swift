@@ -13,6 +13,7 @@ import GameplayKit
 class GameViewController: UIViewController {
 
     var scene: GameScene!
+    var level: Level!
     
     override var prefersStatusBarHidden: Bool{
         return true
@@ -39,6 +40,20 @@ class GameViewController: UIViewController {
         
         //presente la scene
         skView.presentScene(scene)
+        
+        level = Level()
+        scene.level = level
+        
+        beginGame()
+    }
+    
+    func beginGame() {
+        shuffle()
+    }
+    
+    func shuffle() {
+        let newMap = level.shuffle()
+        scene.addSprite(for: newMap)
     }
     
 /*    override func viewDidLoad() {
