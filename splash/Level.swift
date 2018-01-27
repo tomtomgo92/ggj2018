@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import SpriteKit
 
-let NumColumn = 4
+let NumColumn = 6
 let NumRows = 6
 
 class Level {
@@ -30,7 +31,11 @@ class Level {
         
         for row in 0..<NumColumn {
             for column in 0..<NumRows {
-                if(row == 3 && column == 1) {
+                if(row == 0 && column == 0) {
+                    color = Color.ball
+                }
+                else if(row == 5 && column == 1)
+                {
                     color = Color.red
                 }
                 else {

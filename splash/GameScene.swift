@@ -34,6 +34,7 @@ class GameScene: SKScene {
         
         mapsLayer.position = layerPosition
         gameLayer.addChild(mapsLayer)
+        mapsLayer.addChild(ballLayer)
         
     }
     
@@ -62,5 +63,10 @@ class GameScene: SKScene {
             y: CGFloat(row)*TileHeight + TileHeight/2
         )
     }
+    
+    var boule: Ball!
+    
+    var ballLayer = SKNode()
+    
     
 }

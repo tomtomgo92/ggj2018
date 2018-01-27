@@ -11,7 +11,7 @@ import SpriteKit
 
 enum Color: Int, CustomStringConvertible
 {
-    case unknow = 0, red, blue, yellow, white, voids
+    case unknow = 0, red, blue, yellow, white, ball, voids
     
     var spriteName: String
     {
@@ -20,6 +20,7 @@ enum Color: Int, CustomStringConvertible
             "blue",
             "yellow",
             "white",
+            "ball",
             "voids"
         ]
         
